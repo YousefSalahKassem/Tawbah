@@ -27,12 +27,15 @@ class Menu extends StatelessWidget {
                 itemCount: list.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,),
                 itemBuilder: (context,index){
-                  return Column(
-                    children: [
-                      Image.asset(list[index].image,fit: BoxFit.cover,width: Dimensions.height30*2.5,),
-                      SizedBox(height:Dimensions.height10,),
-                      Text(list[index].name,style: GoogleFonts.workSans(textStyle:const TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 14)),),
-                    ],
+                  return InkWell(
+                    onTap: list[index].onTap,
+                    child: Column(
+                      children: [
+                        Image.asset(list[index].image,fit: BoxFit.cover,width: Dimensions.height30*2.5,),
+                        SizedBox(height:Dimensions.height10,),
+                        Text(list[index].name,style: GoogleFonts.workSans(textStyle:const TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 14)),),
+                      ],
+                    ),
                   );
                 }),
           )

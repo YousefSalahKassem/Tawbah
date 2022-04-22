@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tawbah/constants/dimensions.dart';
 import 'package:tawbah/data/category.dart';
+import 'package:tawbah/view/Settings/settings_page.dart';
 import 'package:tawbah/widgets/menu.dart';
 import '../../data/prayers.dart';
 
@@ -56,7 +57,9 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children:  [
                               Text('Welcome Back!',style:GoogleFonts.workSans(textStyle: const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),),
-                              const Icon(Icons.settings,color: Colors.white,size: 20,)
+                              IconButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> SettingsPage()));
+                              },icon: const Icon(Icons.settings,color: Colors.white,size: 20,))
                             ],
                           ),
                           SizedBox(height: Dimensions.height20*1.5,),
