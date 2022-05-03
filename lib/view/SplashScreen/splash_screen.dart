@@ -12,35 +12,38 @@ class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
 
-
 }
 
-
-
 class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin{
-
-  late Animation<double> animation;
-  late AnimationController controller;
-
 
   @override
   void initState() {
     super.initState();
-    controller=AnimationController(vsync: this,duration: const Duration(seconds: 2))..forward();
-    animation=CurvedAnimation(parent: controller, curve: Curves.ease);
     Timer(const Duration(seconds: 3), ()=>Navigator.pushReplacement(context, PageTransition(child: const HomePage(), type: PageTransitionType.rightToLeft)));
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.splashBackground,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          ScaleTransition(scale: animation,child: Center(child: Image.asset('assets/images/logo.png',fit: BoxFit.cover,width:Dimensions.splashImage/1.25 ,))),
-          Center(child: Image.asset('assets/images/islamic.png',fit: BoxFit.cover)),
-      ],),
+      body: Container(
+        height: double.maxFinite,
+        width: double.maxFinite,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              AppColors.fajar1,
+              AppColors.fajar2,
+            ],
+          ),
+        ),
+        child: Stack(
+          children: [
+            Center(child: Image.asset('assets/images/logos.png',fit: BoxFit.cover,width:Dimensions.splashImage*10 ,)),
+            Positioned(right:0,left:0,bottom: -Dimensions.height30*5,child: Image.asset('assets/images/mosque.png',fit: BoxFit.cover,)),
+        ],),
+      ),
     );
   }
 }

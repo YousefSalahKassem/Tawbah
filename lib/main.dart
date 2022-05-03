@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:tawbah/view/SplashScreen/splash_screen.dart';
-
 import 'constants/themes.dart';
 
 Future main() async {

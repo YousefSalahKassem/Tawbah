@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'package:intl/intl.dart';
 import 'package:tawbah/constants/colors.dart';
 
 class Prayers{
@@ -15,4 +15,17 @@ List<Prayers> prayer=[
   Prayers('ASAR', '05:16 PM', 'assets/images/sun.png',AppColors.asar1, AppColors.asar2),
   Prayers('MAGHRIB', '07:14 PM', 'assets/images/sunset.png',AppColors.maghrib1, AppColors.maghrib2),
   Prayers('ISHA', '08:36 PM', 'assets/images/moon.png',AppColors.isha1, AppColors.isha2),
+];
+
+class Categories{
+  String title,subTitle;
+
+  Categories(this.title, this.subTitle);
+}
+
+List<Categories> categories=[
+  Categories('Day', DateFormat('yyyy-MM-dd').format(DateTime.now())),
+  Categories('Time', 'subTitle'),
+  Categories('Hijri', ''),
+  Categories('Location', 'subTitle'),
 ];
