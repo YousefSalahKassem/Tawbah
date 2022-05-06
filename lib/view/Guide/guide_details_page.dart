@@ -46,7 +46,7 @@ class GuideDetailsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 20,),
-                    Text('Step ${(index+1).toString()}:\n\n'+guide.details[index].description,style:const TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 18),),
+                    Text('Step ${(index+1).toString()}:\n\n'+guide.details[index].description,style:const TextStyle(fontWeight: FontWeight.w600,fontSize: 18),),
                     const SizedBox(height: 20,),
                     guide.details[index].image.isEmpty?Container():Image.asset(guide.details[index].image,fit: BoxFit.cover,),
                   ],

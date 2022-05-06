@@ -14,4 +14,14 @@ class AppColors{
   static const Color isha1 = Color(0xFF3e3e3e);
   static const Color isha2 = Color(0xFF2679ad);
   static const Color splashBackground = Color(0xFF220E3D);
+  static const Color quran1 = Color(0xFF64b3c1);
+  static const Color quran2 = Color(0xFF5db3cd);
+  static const Color sebha1 = Color(0xFFce7eb2);
+  static const Color sebha2 = Color(0xFFdf9bc1);
+  static const Color dua1 = Color(0xFF34b5ac);
+  static const Color dua2 = Color(0xFF7bc695);
+  static const Color guide1 = Color(0xFF89a4e8);
+  static const Color guide2 = Color(0xFF96bef7);
+  static const Color qibla1 = Color(0xFFbc84cc);
+  static const Color qibla2 = Color(0xFFbca1ea);
 }

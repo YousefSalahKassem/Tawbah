@@ -29,8 +29,8 @@ class MyThemes {
   );
 
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.grey.shade100,
     primaryColor: Colors.white,
     colorScheme:const ColorScheme.light(),
-  );
+      );
 }

@@ -44,7 +44,7 @@ class _SettingsPageState extends State<SettingsPage> {
       body: Column(
         children:  [
           ListTile(
-            title: const Text('Change Mood',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),),
+            title: const Text('Change Mood',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
             trailing: DayNightSwitcher(isDarkModeEnabled: themeProvider.isDarkMode , onStateChanged:(bool isDarkModeEnabled){
               setState(() {
                 final provider = Provider.of<ThemeProvider>(context, listen: false);
@@ -52,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
            });} ),
           ),
           ListTile(
-            title: const Text('Main Colors',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),),
+            title: const Text('Main Colors',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
             trailing: SizedBox(
               width: Dimensions.height30*3,
               child: Row(
@@ -76,7 +76,7 @@ class _SettingsPageState extends State<SettingsPage> {
             ),
           ),
           ListTile(
-            title: const Text('Push Notification',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),),
+            title: const Text('Push Notification',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
             trailing: Switch(value: themeProvider.isDarkMode, onChanged: (value){
                 final provider = Provider.of<ThemeProvider>(context, listen: false);
                 provider.toggleTheme(value);

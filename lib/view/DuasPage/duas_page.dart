@@ -50,7 +50,7 @@ class DuasScreen extends StatelessWidget {
                         child: Text((index+1).toString(),style: const TextStyle(color: Colors.white,fontSize: 12),),
                       ),
                     ),
-                    title: Text(dua[index].title,style:const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                    title: Text(dua[index].title,style:const TextStyle(fontWeight: FontWeight.bold),),
                     trailing: const CircleAvatar(
                       radius: 10,
                       backgroundColor: AppColors.fajar2,
@@ -62,7 +62,7 @@ class DuasScreen extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsPage(duas: dua[index])));
                     },
                   ),
-                  Divider(thickness: .5,color: Colors.grey.shade300,),
+                  const Divider(thickness: .5),
                 ],
               );
             }),
