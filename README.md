@@ -2,6 +2,4 @@
 
 An Islamic Application for muslims.
 
-Under Development.
-
-![Screenshot_1650256646](https://user-images.githubusercontent.com/91211054/163758396-ef166c2d-e62d-43af-b87f-0a66eefeb218.png)
+![Web 1920 – 1](https://user-images.githubusercontent.com/91211054/167230557-4d693cad-535f-4021-a988-24b7372fe022.png)
